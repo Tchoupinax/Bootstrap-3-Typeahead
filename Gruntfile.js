@@ -17,21 +17,21 @@ module.exports = function (grunt) {
       },
       src: ['bootstrap3-typeahead.js']
     },
-	jscs: {
-		src: "bootstrap3-typeahead.js",
-		options: {
-			config: ".jscsrc",
-		}
-	},
+    jscs: {
+      src: "bootstrap3-typeahead.js",
+      options: {
+        config: ".jscsrc",
+      }
+    },
     uglify: {
       options: {
         preserveComments: 'some'
       },
       core: {
-      files: {
-        'bootstrap3-typeahead.min.js': ['bootstrap3-typeahead.js']
+        files: {
+          'bootstrap3-typeahead.min.js': ['bootstrap3-typeahead.js']
+        }
       }
-	  }
     }
   });
 
@@ -40,8 +40,8 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
   //require('time-grunt')(grunt);
   grunt.registerTask('test', ['jshint', 'jscs']);
-  
+
   // Default task.
-  grunt.registerTask('default', ['test','uglify']);
+  grunt.registerTask('default', ['test', 'uglify']);
 
 };
